@@ -8,7 +8,7 @@
 	[RecipientCity] VARCHAR(50) NULL,
 	[RecipientCode] VARCHAR(10) NULL,
 	[RecipientPhoneNumber] VARCHAR(10) NULL,
-	[RecipientEmail] VARCHAR(10) NULL,
+	[RecipientEmail] VARCHAR(50) NULL,
 	[DeliveryDate] SMALLDATETIME NULL,
 	[NumberOfLillies] SMALLINT NOT NULL, 
     [CustomerId] INT NULL, 
