@@ -7,6 +7,7 @@ AS
 		,o.Recipient
 		,o.RecipientStreetAddress
 		,o.RecipientCity
+		,o.RecipientRegion
 		,o.RecipientCode
 		,o.RecipientEmail
 		,o.RecipientPhoneNumber

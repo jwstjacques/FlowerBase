@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetOrdersByCustomersId]
+﻿CREATE PROCEDURE [dbo].[GetOrdersByCustomerId]
 	@CustomerId Int
 AS
 	SELECT

@@ -73,11 +73,12 @@
     <Build Include="Stored Procedures\DeleteCustomer.sql" />
     <Build Include="Stored Procedures\DeleteBusiness.sql" />
     <Build Include="Stored Procedures\GetOrders.sql" />
-    <Build Include="Stored Procedures\GetOrdersByCustomersId.sql" />
+    <Build Include="Stored Procedures\GetOrdersByCustomerId.sql" />
     <Build Include="Stored Procedures\GetOrdersByBusinessId.sql" />
     <Build Include="Tables\Notes.sql" />
     <Build Include="Stored Procedures\GetOrderDetailsByOrderId.sql" />
     <Build Include="Stored Procedures\SaveOrder.sql" />
+    <Build Include="Stored Procedures\GetClients.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="FlowerBase.refactorlog" />

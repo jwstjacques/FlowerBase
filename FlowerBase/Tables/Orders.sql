@@ -6,6 +6,7 @@
     [Recipient] NVARCHAR(50) NULL,
     [RecipientStreetAddress] VARCHAR(50) NULL,
 	[RecipientCity] VARCHAR(50) NULL,
+	[RecipientRegion] VARCHAR(10) NULL,
 	[RecipientCode] VARCHAR(10) NULL,
 	[RecipientPhoneNumber] VARCHAR(10) NULL,
 	[RecipientEmail] VARCHAR(50) NULL,

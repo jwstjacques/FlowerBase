@@ -8,6 +8,7 @@ AS
 		,b.ContactName
 		,b.StreetAddress
 		,b.City
+		,b.Region
 		,b.Code
 		,b.PhoneNumber
 		,b.Extension

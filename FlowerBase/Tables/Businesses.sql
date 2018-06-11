@@ -4,6 +4,7 @@
     [ContactName]      NVARCHAR (50) NOT NULL,
     [StreetAddress] VARCHAR (50)  NOT NULL,
     [City]          VARCHAR (50)  NOT NULL,
+	[Region]          VARCHAR (50)  NULL,
     [Code]          VARCHAR (10)  NOT NULL,
     [PhoneNumber]   VARCHAR (10)  NULL,
 	[Extension]   VARCHAR (10)  NULL,

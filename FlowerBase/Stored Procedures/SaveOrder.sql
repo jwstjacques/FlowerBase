@@ -5,6 +5,7 @@
 	,@Recipient varchar(5)
 	,@RecipientStreetAddress varchar(50)
 	,@RecipientCity varchar(50)
+	,@RecipientRegion varchar(50)
 	,@RecipientCode varchar(10)
 	,@RecipientPhoneNumber varchar(10)
 	,@RecipientEmail varchar(50)
@@ -18,9 +19,9 @@ AS
 
 	-- ORDER
 	INSERT INTO [dbo].[Orders]
-		(OrderDate, DeliveryDate, Recipient, RecipientStreetAddress, RecipientCity, RecipientCode, RecipientPhoneNumber, RecipientEmail, NumberOfLillies, CustomerId, BusinessId)
+		(OrderDate, DeliveryDate, Recipient, RecipientStreetAddress, RecipientCity, RecipientRegion, RecipientCode, RecipientPhoneNumber, RecipientEmail, NumberOfLillies, CustomerId, BusinessId)
 	VALUES
-		(@OrderDate, @DeliveryDate, @Recipient, @RecipientStreetAddress, @RecipientCity, @RecipientCode, @RecipientPhoneNumber, @RecipientEmail, @NumberOfLillies, @CustomersId, @BusinessId)
+		(@OrderDate, @DeliveryDate, @Recipient, @RecipientStreetAddress, @RecipientCity, @RecipientRegion, @RecipientCode, @RecipientPhoneNumber, @RecipientEmail, @NumberOfLillies, @CustomersId, @BusinessId)
 	SET @OrderId = SCOPE_IDENTITY()
 
 	-- NOTE

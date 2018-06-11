@@ -8,6 +8,7 @@ AS
 		,c.LastName
 		,c.StreetAddress
 		,c.City
+		,c.Region
 		,c.Code
 		,c.PhoneNumber
 		,c.Email
