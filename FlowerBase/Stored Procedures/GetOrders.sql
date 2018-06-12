@@ -7,9 +7,23 @@ AS
 		,o.BusinessId
 		,o.CustomerId
 		,CASE
-			WHEN o.BusinessId IS NOT NULL THEN CONCAT(b.BusinessName, '-', b.ContactName)
+			WHEN o.BusinessId IS NULL THEN o.CustomerId
+			ELSE o.BusinessId
+		END AS "ClientId"
+		,CASE
+			WHEN o.BusinessId IS NULL THEN 0
+			ELSE 1
+		END AS "IsBusiness"
+		,CASE
+			WHEN o.BusinessId IS NOT NULL THEN 
+				CASE
+					WHEN b.ContactName IS NULL OR b.ContactName = ''
+						THEN b.BusinessName
+					ELSE
+						CONCAT(b.BusinessName, ' - ', b.ContactName)
+					END
 			ELSE CONCAT(c.FirstName,' ', "LastName")
-		END
+		END AS "ClientName"
 		,o.Recipient
 		,o.RecipientStreetAddress
 		,o.RecipientCity
@@ -18,7 +32,7 @@ AS
 		,o.RecipientPhoneNumber
 		,o.RecipientEmail
 		,o.DeliveryDate
-		,o.NumberOfLillies
+		,o.[NumberOfLilies]
 		,n.[Text]
 	FROM [dbo].[Orders] o
 	LEFT JOIN [dbo].[Customers] c

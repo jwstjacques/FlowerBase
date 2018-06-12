@@ -19,7 +19,7 @@ AS
 
 	-- ORDER
 	INSERT INTO [dbo].[Orders]
-		(OrderDate, DeliveryDate, Recipient, RecipientStreetAddress, RecipientCity, RecipientRegion, RecipientCode, RecipientPhoneNumber, RecipientEmail, NumberOfLillies, CustomerId, BusinessId)
+		(OrderDate, DeliveryDate, Recipient, RecipientStreetAddress, RecipientCity, RecipientRegion, RecipientCode, RecipientPhoneNumber, RecipientEmail, [NumberOfLilies], CustomerId, BusinessId)
 	VALUES
 		(@OrderDate, @DeliveryDate, @Recipient, @RecipientStreetAddress, @RecipientCity, @RecipientRegion, @RecipientCode, @RecipientPhoneNumber, @RecipientEmail, @NumberOfLillies, @CustomersId, @BusinessId)
 	SET @OrderId = SCOPE_IDENTITY()

@@ -11,7 +11,7 @@
 	[RecipientPhoneNumber] VARCHAR(10) NULL,
 	[RecipientEmail] VARCHAR(50) NULL,
 	[DeliveryDate] SMALLDATETIME NULL,
-	[NumberOfLillies] SMALLINT NOT NULL, 
+	[NumberOfLilies] SMALLINT NOT NULL, 
     [CustomerId] INT NULL, 
     [BusinessId] INT NULL
 )

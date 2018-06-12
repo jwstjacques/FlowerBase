@@ -7,7 +7,7 @@ AS
 		,o.DeliveryDate
 		,o.Recipient
 		,o.RecipientCity
-		,o.NumberOfLillies
+		,o.[NumberOfLilies]
 	FROM [dbo].[Orders] o
 	WHERE o.CustomerId = @CustomerId
 	ORDER BY o.OrderDate DESC

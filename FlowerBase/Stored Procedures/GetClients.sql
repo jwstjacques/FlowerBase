@@ -1,27 +1,27 @@
 ﻿CREATE PROCEDURE [dbo].[GetClients]
 AS
 	SELECT
-	x.[Id]
-	,x.[Name]
+	x.[ClientId]
+	,x.[ClientName]
 	,x.[IsBusiness]
 	FROM (
 		(SELECT
-			b.[BusinessId] AS "Id"
-			,CASE WHEN b.ContactName = ''
+			b.[BusinessId] AS "ClientId"
+			,CASE WHEN b.ContactName = '' OR b.ContactName IS NULL
 				THEN b.[BusinessName]
 			ELSE
 				CONCAT(b.[BusinessName], ' - ', b.[ContactName])
-			END AS "Name"
+			END AS "ClientName"
 			,1 AS "IsBusiness"
 		FROM [dbo].[Businesses] b
 		)
 		UNION
 		(SELECT
-			c.CustomerId AS "Id"
-			,CONCAT(c.[FirstName], ' ', c.[LastName]) AS "Name"
+			c.CustomerId AS "ClientId"
+			,CONCAT(c.[FirstName], ' ', c.[LastName]) AS "ClientName"
 			,0 AS "IsBusiness"
 		FROM [dbo].[Customers] c
 		)
 	) x
-	ORDER BY [Name]
+	ORDER BY [ClientName]
 GO
